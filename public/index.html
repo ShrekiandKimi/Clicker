@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍪 Cookie Clicker Master</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cookie-bite"></i> Cookie Clicker Master</h1>
+            <div class="player-info">
+                <input type="text" id="playerName" placeholder="Введите ваше имя">
+                <button id="saveName">Сохранить имя</button>
+                <div class="player-id">ID: <span id="playerId">...</span></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div class="cookie-display">
+                    <div class="cookie-count" id="cookieCount">0</div>
+                    <div class="cookie-label">печенек</div>
+                    <div class="cookie-per-second" id="cps">0 печенек/сек</div>
+                </div>
+                
+                <button id="cookieButton" class="cookie-btn">
+                    <i class="fas fa-cookie-bite"></i>
+                    <span>КЛИКНИ МЕНЯ!</span>
+                </button>
+
+                <div class="stats">
+                    <div class="stat">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <span>Клики: <span id="totalClicks">0</span></span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Сила клика: <span id="clickPower">1.0</span></span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span>Игроков онлайн: <span id="playersOnline">1</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upgrades-section">
+                <h2><i class="fas fa-arrow-up"></i> Улучшения</h2>
+                <div id="upgradesList" class="upgrades-list">
+                    <!-- Улучшения будут загружены через JS -->
+                </div>
+            </div>
+
+            <div class="api-controls">
+                <h2><i class="fas fa-code"></i> API Демо</h2>
+                <div class="controls-grid">
+                    <button class="api-btn" onclick="getGameState()">
+                        <i class="fas fa-database"></i> GET /state
+                    </button>
+                    <button class="api-btn" onclick="handleClick()">
+                        <i class="fas fa-mouse"></i> POST /click
+                    </button>
+                    <button class="api-btn" onclick="getLeaderboard()">
+                        <i class="fas fa-trophy"></i> GET /leaderboard
+                    </button>
+                    <button class="api-btn" onclick="createPlayer()">
+                        <i class="fas fa-user-plus"></i> POST /new-player
+                    </button>
+                    <button class="api-btn" onclick="resetPlayer()">
+                        <i class="fas fa-redo"></i> DELETE /reset
+                    </button>
+                </div>
+                <div class="api-response">
+                    <h3>Ответ API:</h3>
+                    <pre id="apiResponse">{ "status": "Готов к работе!" }</pre>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Express.js API Кликер-игра | Контрольная работа №5</p>
+            <p>Используйте DevTools (F12) → Console для просмотра логов</p>
+        </footer>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
