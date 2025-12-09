@@ -1,4 +1,4 @@
-### 📖 README.md
+<img width="959" height="535" alt="image" src="https://github.com/user-attachments/assets/1397114b-7ce3-4feb-903f-1b7f080cdeeb" />
 
 🍪Куки кликер - Express.js API
 
@@ -34,6 +34,8 @@ public/              # Статические файлы
 ```
 
 ##  Скриншоты
+<img width="959" height="533" alt="image" src="https://github.com/user-attachments/assets/a9b29896-57e6-49d4-a042-c4c447c36207" />
+<img width="764" height="356" alt="image" src="https://github.com/user-attachments/assets/70f0c829-a4ba-4e95-9095-b6dff6757e26" />
 
 
 ##  Используемые технологии
